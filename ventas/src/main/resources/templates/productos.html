@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Productos por Categoría</title>
+</head>
+<body>
+    <h1>Filtrar productos vendidos en 2019</h1>
+    <form method="post" action="/filtrar">
+        <select name="categoriaId">
+            <option th:each="cat : ${categorias}" th:value="${cat.categoriaId}" th:text="${cat.nombre}"
+                    th:selected="${cat.categoriaId == categoriaSeleccionada}">Categoría</option>
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
+
+    <ul th:if="${productos != null}">
+        <li th:each="p : ${productos}" th:text="${p.nombre}">Nombre producto</li>
+    </ul>
+</body>
+</html>
