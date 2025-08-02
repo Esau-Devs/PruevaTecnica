@@ -42,3 +42,14 @@ mvn spring-boot:run
 ```
 http://localhost:8080
 ```
+## 📋 Información Importante
+
+> [!IMPORTANT]
+> Debes ejecutar el script SQL manualmente para que la aplicación funcione correctamente.  
+
+
+
+## 🗂️ Script de Base de Datos
+
+El script SQL para crear la base de datos y las tablas está disponible en el Repositorio:
+
